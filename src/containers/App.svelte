@@ -5,6 +5,8 @@
 	import Gender from '../components/Gender.svelte';
 	import Estados from "../components/Estados.svelte";
 	import AgeRange from "../components/AgeRange.svelte";
+	import Footer from "../components/Footer.svelte";
+	import Menu from "../components/Menu.svelte";
 	
 	export let url = ""; //This property is necessary declare to avoid ignore the Router
 
@@ -13,6 +15,14 @@
 	const API = 'https://covid19.patria.org.ve/api/v1/summary';
 
 	let data;
+
+	onMount(async function() {
+		if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.querySelector('html').classList.add('dark')
+		} else if (localStorage.theme === 'dark') {
+			document.querySelector('html').classList.add('dark')
+		}
+    });
 
 	onMount(async function() {
 		try {
@@ -28,13 +38,15 @@
 
 <main>
 	<div class="container-svelte">
+		
 		<Router url="{url}">
-			<nav>
+			<!-- <nav>
 			   <Link to="/">Home</Link>
-			   <Link to="about">Estados</Link>
-			 </nav>
+			   <Link to="estados">Estados</Link>
+			 </nav> -->
+			 <Menu />
 			 <div>
-			   <Route path="about">
+			   <Route path="estados">
 				{#if data}
 					<Estados/>
 				{:else}
@@ -44,20 +56,18 @@
 			   <Route path="/">
 					{#if data}
 						<Global {...data} />
-						<div class="flex flex-col md:flex-row">
+						<div class="flex flex-col md:flex-row gap-2">
 							<Gender {...data} />
 							<AgeRange {...data} />
 						</div>
-						<h1 class="text-green-500">Hello !</h1>
-						<p>Svelte + Tailwind 2.0.2</p>
-						<a href="/about">about</a>
 					{:else}
 						<p>{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
 					{/if}
-			</Route>
+				</Route>
 			 </div>
 		   </Router>
 	  </div>
+	  <Footer />
 </main>
 
 

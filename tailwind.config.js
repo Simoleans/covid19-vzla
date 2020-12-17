@@ -4,6 +4,7 @@ module.exports = {
     purgeLayersByDefault: true
   },
   purge: ['src/*.svelte', 'src/**/*.svelte'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
