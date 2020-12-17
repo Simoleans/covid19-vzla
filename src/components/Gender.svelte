@@ -15,7 +15,7 @@
         "showValues": "1",
         "showPercentInTooltip": "0",
         "enableMultiSlicing": "1",
-        "theme": "fusion"
+        "theme": "fusion",
       },
       "data": [{
         "label": "Masculino",

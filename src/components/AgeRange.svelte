@@ -4,7 +4,7 @@
     import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
     import SvelteFC, { fcRoot } from 'svelte-fusioncharts';
 
-	export let Confirmed; 
+  export let Confirmed; 
 
 	fcRoot(FusionCharts, Charts, FusionTheme);
   
@@ -15,7 +15,6 @@
         "xAxisName": "Rango de edad",
         "yAxisName": "Cantidad de personas",
         "theme": "fusion",
-        "bgColor" : "#1F2937"
       },
       "data": [
       {
@@ -69,6 +68,6 @@
     };
 </script>
 
-<div class="AgeRange flex-1 items-center bg-red-600">
+<div class="AgeRange flex-1 items-center" style="color : red !important">
       <SvelteFC {...chartConfig} />
 </div>

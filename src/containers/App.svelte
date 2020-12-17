@@ -9,8 +9,7 @@
 	import Menu from "../components/Menu.svelte";
 	
 	export let url = ""; //This property is necessary declare to avoid ignore the Router
-
-	
+	let checkedDarkMode = false;
 	let error = false;
 	const API = 'https://covid19.patria.org.ve/api/v1/summary';
 
@@ -18,8 +17,10 @@
 
 	onMount(async function() {
 		if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			checkedDarkMode = true;
 			document.querySelector('html').classList.add('dark')
 		} else if (localStorage.theme === 'dark') {
+			checkedDarkMode = false;
 			document.querySelector('html').classList.add('dark')
 		}
     });
@@ -44,7 +45,7 @@
 			   <Link to="/">Home</Link>
 			   <Link to="estados">Estados</Link>
 			 </nav> -->
-			 <Menu />
+			 <Menu {checkedDarkMode}/>
 			 <div>
 			   <Route path="estados">
 				{#if data}
@@ -57,8 +58,8 @@
 					{#if data}
 						<Global {...data} />
 						<div class="flex flex-col md:flex-row gap-2">
-							<Gender {...data} />
-							<AgeRange {...data} />
+							<Gender {...data}/>
+							<AgeRange {...data}  />
 						</div>
 					{:else}
 						<p>{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>

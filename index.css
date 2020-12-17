@@ -11,3 +11,13 @@
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
+
+.toggle-checkbox:checked {
+  @apply right-0 dark:border-yellow-400;
+  right: 0;
+  /* border-color: #68D391; */
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply dark:bg-yellow-400 bg-white;
+  /* background-color: #68D391; */
+}
