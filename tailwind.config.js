@@ -3,7 +3,10 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  purge: ['src/*.svelte', 'src/**/*.svelte'],
+  // purge: {
+  //   enabled: true,
+  //   content : ['src/*.svelte', 'src/**/*.svelte'],
+  // },
   darkMode: 'class',
   theme: {
     extend: {

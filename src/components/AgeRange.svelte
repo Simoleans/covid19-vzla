@@ -1,5 +1,5 @@
 <script>
-	import FusionCharts from 'fusioncharts';
+	  import FusionCharts from 'fusioncharts';
     import Charts from 'fusioncharts/fusioncharts.charts';
     import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
     import SvelteFC, { fcRoot } from 'svelte-fusioncharts';
@@ -11,10 +11,11 @@
     let dataSource = {
       "chart": {
         "caption": "CASOS DE COVID-19 EN VENEZUELA",
-      "subCaption": "Por rango de Edad [0-99]",
-      "xAxisName": "Rango de edad",
-      "yAxisName": "Cantidad de personas",
-      "theme": "fusion"
+        "subCaption": "Por rango de Edad [0-99]",
+        "xAxisName": "Rango de edad",
+        "yAxisName": "Cantidad de personas",
+        "theme": "fusion",
+        "bgColor" : "#1F2937"
       },
       "data": [
       {
@@ -68,6 +69,6 @@
     };
 </script>
 
-<div class="AgeRange flex-1 items-center">
+<div class="AgeRange flex-1 items-center bg-red-600">
       <SvelteFC {...chartConfig} />
 </div>
