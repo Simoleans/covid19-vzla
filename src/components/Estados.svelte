@@ -4,6 +4,8 @@ import Charts from 'fusioncharts/fusioncharts.charts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import SvelteFC, { fcRoot } from 'svelte-fusioncharts';
 
+export let Confirmed;
+
 // Always set FusionCharts as the first parameter
 fcRoot(FusionCharts, Charts, FusionTheme);
 
@@ -13,100 +15,109 @@ const dataSource = {
     "yaxisname": "Por Ciudad",
     "aligncaptionwithcanvas": "0",
     "plottooltext": "<b>$dataValue</b> Casos",
+    "labelDisplay": "Auto",
     "theme": "fusion"
   },
   "data": [
     {
-      "label": "Travel & Leisure",
-      "value": "41"
+      "label": "Amazonas",
+      "value": Confirmed.ByState.Amazonas
     },
     {
-      "label": "Advertising/Marketing/PR",
-      "value": "39"
+      "label": "Anzoátegui",
+      "value": Confirmed.ByState.Anzoátegui
     },
     {
-      "label": "Other",
-      "value": "38"
+      "label": "Apure",
+      "value": Confirmed.ByState.Apure
     },
     {
-      "label": "Real Estate",
-      "value": "32"
+      "label": "Aragua",
+      "value": Confirmed.ByState.Aragua
     },
     {
-      "label": "Communications/Cable/Phone",
-      "value": "26"
+      "label": "Barinas",
+      "value": Confirmed.ByState.Barinas
     },
     {
-      "label": "Construction",
-      "value": "25"
+      "label": "Bolívar",
+      "value": Confirmed.ByState.Bolívar
     },
     {
-      "label": "Entertainment",
-      "value": "25"
+      "label": "Carabobo",
+      "value": Confirmed.ByState.Carabobo
     },
     {
-      "label": "Staffing Firm/Full Time/Temporary",
-      "value": "24"
+      "label": "Cojedes",
+      "value": Confirmed.ByState.Cojedes
     },
     {
-      "label": "Transportation/Logistics",
-      "value": "23"
+      "label": "Delta Amacuro",
+      "value": Confirmed.ByState["Delta Amacuro"]
     },
     {
-      "label": "Utilities",
-      "value": "22"
+      "label": "Distrito Capital",
+      "value": Confirmed.ByState["Distrito Capital"]
     },
     {
-      "label": "Aerospace/Defense Products",
-      "value": "18"
+      "label": "Falcón",
+      "value": Confirmed.ByState.Anzoátegui
     },
     {
-      "label": "Banking/Finance/Securities",
-      "value": "16"
+      "label": "Guarico",
+      "value": Confirmed.ByState.Falcón
     },
     {
-      "label": "Consumer Products - Non-Durables",
-      "value": "15"
+      "label": "La Guaira",
+      "value": Confirmed.ByState["La Guaira"]
     },
     {
-      "label": "Distribution",
-      "value": "13"
+      "label": "Lara",
+      "value": Confirmed.ByState.Lara
     },
     {
-      "label": "Education",
-      "value": "12"
+      "label": "Los Roques",
+      "value": Confirmed.ByState["Los Roques"]
     },
     {
-      "label": "Health Products & Services",
-      "value": "11"
+      "label": "Mérida",
+      "value": Confirmed.ByState.Mérida
     },
     {
-      "label": "Hospitality & Hotels",
-      "value": "10"
+      "label": "Miranda",
+      "value": Confirmed.ByState.Miranda
     },
     {
-      "label": "Non-Business/Residential",
-      "value": "6"
+      "label": "Monagas",
+      "value": Confirmed.ByState.Mérida
     },
     {
-      "label": "Pharmaceutical",
-      "value": "4"
+      "label": "Nueva Esparta",
+      "value": Confirmed.ByState["Nueva Esparta"]
     },
     {
-      "label": "Printing & Publishing",
-      "value": "1"
+      "label": "Portuguesa",
+      "value": Confirmed.ByState.Portuguesa
     },
     {
-      "label": "Professional Services",
-      "value": "1"
+      "label": "Sucre",
+      "value": Confirmed.ByState.Sucre
     },
     {
-      "label": "VAR/ISV",
-      "value": "1"
+      "label": "Táchira",
+      "value": Confirmed.ByState.Táchira
     },
     {
-      "label": "Warranty Administrators",
-      "value": "1"
+      "label": "Trujillo",
+      "value": Confirmed.ByState.Trujillo
+    },
+    {
+      "label": "Yaracuy",
+      "value": Confirmed.ByState.Yaracuy
+    },
+    {
+      "label": "Zulia",
+      "value": Confirmed.ByState.Zulia
     }
   ]
 };

@@ -64,7 +64,7 @@
 							<AgeRange {...data}  />
 						</div>
 						<div class="flex flex-row">
-							<Estados/>
+							<Estados {...data}/>
 						</div>
 					{:else}
 						<p>{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
