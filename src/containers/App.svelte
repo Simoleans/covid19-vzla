@@ -4,9 +4,11 @@
 	import Global from '../components/Global.svelte';
 	import Gender from '../components/Gender.svelte';
 	import Estados from "../components/Estados.svelte";
+	import Historial from "../components/Historial.svelte";
 	import AgeRange from "../components/AgeRange.svelte";
 	import Footer from "../components/Footer.svelte";
 	import Menu from "../components/Menu.svelte";
+	import BackTop from '../components/BackTop.svelte';
 	
 	export let url = ""; //This property is necessary declare to avoid ignore the Router
 	let checkedDarkMode = false;
@@ -47,9 +49,9 @@
 			 </nav> -->
 			 <Menu {checkedDarkMode}/>
 			 <div>
-			   <Route path="estados">
+			   <Route path="historial">
 				{#if data}
-					<Estados/>
+					<Historial/>
 				{:else}
 					<p>{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
 				{/if}
@@ -61,6 +63,9 @@
 							<Gender {...data}/>
 							<AgeRange {...data}  />
 						</div>
+						<div class="flex flex-row">
+							<Estados/>
+						</div>
 					{:else}
 						<p>{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
 					{/if}
@@ -69,6 +74,7 @@
 		   </Router>
 	  </div>
 	  <Footer />
+	  <BackTop />
 </main>
 
 
