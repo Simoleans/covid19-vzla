@@ -40,7 +40,7 @@
 
 
 <main>
-	<div class="container-svelte">
+	<div class="container-svelte overflow-y-auto">
 		
 		<Router url="{url}">
 			<!-- <nav>
@@ -63,7 +63,7 @@
 							<Gender {...data}/>
 							<AgeRange {...data}  />
 						</div>
-						<div class="flex flex-row">
+						<div class="flex flex-row mt-3 md:w-full lg:w-full">
 							<Estados {...data}/>
 						</div>
 					{:else}

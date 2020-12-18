@@ -15,6 +15,7 @@
         "showValues": "1",
         "showPercentInTooltip": "0",
         "enableMultiSlicing": "1",
+        "formatNumber": "0",
         "theme": "fusion",
       },
       "data": [{

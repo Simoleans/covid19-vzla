@@ -9,127 +9,197 @@ export let Confirmed;
 // Always set FusionCharts as the first parameter
 fcRoot(FusionCharts, Charts, FusionTheme);
 
+
+
 const dataSource = {
   "chart": {
-    "caption": "CASOS DE COVID-19 EN VENEZUELA",
-    "yaxisname": "Por Ciudad",
-    "aligncaptionwithcanvas": "0",
-    "plottooltext": "<b>$dataValue</b> Casos",
-    "labelDisplay": "Auto",
+    "caption": "CASOS COVID-19 VENEZUELA",
+    "subcaption": "Por estado",
+    "plottooltext": "<strong>$label</strong>: $dataValue",
+    "yaxisname": "CASOS",
+    "xaxisname": "ESTADOS",
+    "formatNumber": "0",
+    "formatNumberScale": "0",
+    "thousandSeparator": ".",
+    "decimalSeparator": ",",
+    "yaxismaxvalue": "25000",
+    "numberSuffix": " /casos",
+    "showValues": "1",
     "theme": "fusion"
   },
-  "data": [
+  "categories": [
     {
-      "label": "Amazonas",
-      "value": Confirmed.ByState.Amazonas
-    },
+      "category": [
+        {
+          "label": "Amazonas",
+        },
+        {
+          "label": "Anzoátegui",
+        },
+        {
+          "label": "Apure",
+        },
+        {
+          "label": "Aragua",
+        },
+        {
+          "label": "Barinas",
+        },
+        {
+          "label": "Bolívar",
+        },
+        {
+          "label": "Carabobo",
+        },
+        {
+          "label": "Cojedes",
+        },
+        {
+          "label": "Delta Amacuro",
+        },
+        {
+          "label": "Distrito Capital",
+        },
+        {
+          "label": "Falcón",
+        },
+        {
+          "label": "Guarico",
+        },
+        {
+          "label": "La Guaira",
+        },
+        {
+          "label": "Lara",
+        },
+        {
+          "label": "Los Roques",
+        },
+        {
+          "label": "Mérida",
+        },
+        {
+          "label": "Miranda",
+        },
+        {
+          "label": "Monagas",
+        },
+        {
+          "label": "Nueva Esparta",
+        },
+        {
+          "label": "Portuguesa",
+        },
+        {
+          "label": "Sucre",
+        },
+        {
+          "label": "Táchira",
+        },
+        {
+          "label": "Trujillo",
+        },
+        {
+          "label": "Yaracuy",
+        },
+        {
+          "label": "Zulia",
+        }
+      ]
+    }
+  ],
+  "dataset": [
     {
-      "label": "Anzoátegui",
-      "value": Confirmed.ByState.Anzoátegui
-    },
-    {
-      "label": "Apure",
-      "value": Confirmed.ByState.Apure
-    },
-    {
-      "label": "Aragua",
-      "value": Confirmed.ByState.Aragua
-    },
-    {
-      "label": "Barinas",
-      "value": Confirmed.ByState.Barinas
-    },
-    {
-      "label": "Bolívar",
-      "value": Confirmed.ByState.Bolívar
-    },
-    {
-      "label": "Carabobo",
-      "value": Confirmed.ByState.Carabobo
-    },
-    {
-      "label": "Cojedes",
-      "value": Confirmed.ByState.Cojedes
-    },
-    {
-      "label": "Delta Amacuro",
-      "value": Confirmed.ByState["Delta Amacuro"]
-    },
-    {
-      "label": "Distrito Capital",
-      "value": Confirmed.ByState["Distrito Capital"]
-    },
-    {
-      "label": "Falcón",
-      "value": Confirmed.ByState.Anzoátegui
-    },
-    {
-      "label": "Guarico",
-      "value": Confirmed.ByState.Falcón
-    },
-    {
-      "label": "La Guaira",
-      "value": Confirmed.ByState["La Guaira"]
-    },
-    {
-      "label": "Lara",
-      "value": Confirmed.ByState.Lara
-    },
-    {
-      "label": "Los Roques",
-      "value": Confirmed.ByState["Los Roques"]
-    },
-    {
-      "label": "Mérida",
-      "value": Confirmed.ByState.Mérida
-    },
-    {
-      "label": "Miranda",
-      "value": Confirmed.ByState.Miranda
-    },
-    {
-      "label": "Monagas",
-      "value": Confirmed.ByState.Mérida
-    },
-    {
-      "label": "Nueva Esparta",
-      "value": Confirmed.ByState["Nueva Esparta"]
-    },
-    {
-      "label": "Portuguesa",
-      "value": Confirmed.ByState.Portuguesa
-    },
-    {
-      "label": "Sucre",
-      "value": Confirmed.ByState.Sucre
-    },
-    {
-      "label": "Táchira",
-      "value": Confirmed.ByState.Táchira
-    },
-    {
-      "label": "Trujillo",
-      "value": Confirmed.ByState.Trujillo
-    },
-    {
-      "label": "Yaracuy",
-      "value": Confirmed.ByState.Yaracuy
-    },
-    {
-      "label": "Zulia",
-      "value": Confirmed.ByState.Zulia
+      "data": [
+        {
+          "label" : "Amazonas",
+          "value": Confirmed.ByState.Amazonas
+        },
+        {
+          "value": Confirmed.ByState.Anzoátegui
+        },
+        {
+          "value": Confirmed.ByState.Apure
+        },
+        {
+          "value": Confirmed.ByState.Aragua
+        },
+        {
+          "value": Confirmed.ByState.Barinas
+        },
+        {
+          "value": Confirmed.ByState.Bolívar
+        },
+        {
+          "value": Confirmed.ByState.Carabobo
+        },
+        {
+          "value": Confirmed.ByState.Cojedes
+        },
+        {
+          "value": Confirmed.ByState["Delta Amacuro"]
+        },
+        {
+          "value": Confirmed.ByState["Distrito Capital"]
+        },
+        {
+          "value": Confirmed.ByState.Anzoátegui
+        },
+        {
+          "value": Confirmed.ByState.Falcón
+        },
+        {
+          "value": Confirmed.ByState["La Guaira"]
+        },
+        {
+          "value": Confirmed.ByState.Lara
+        },
+        {
+          "value": Confirmed.ByState["Los Roques"]
+        },
+        {
+          "value": Confirmed.ByState.Mérida
+        },
+        {
+          "value": Confirmed.ByState.Miranda
+        },
+        {
+          "value": Confirmed.ByState.Mérida
+        },
+        {
+          "value": Confirmed.ByState["Nueva Esparta"]
+        },
+        {
+          "value": Confirmed.ByState.Portuguesa
+        },
+        {
+          "value": Confirmed.ByState.Sucre
+        },
+        {
+          "value": Confirmed.ByState.Táchira
+        },
+        {
+          "value": Confirmed.ByState.Trujillo
+        },
+        {
+          "value": Confirmed.ByState.Yaracuy
+        },
+        {
+          "value": Confirmed.ByState.Zulia
+        }
+      ]
     }
   ]
 };
 
 const chartConfigs = {
-   type: 'bar2d',
-   width: 600,
+   type: 'scrollbar2d',
+   width: '100%',
    height: 400,
    dataFormat: 'json',
    dataSource
 };
 </script>
-<div class="Estados">
+<div class="Estados flex-1">
     <SvelteFC {...chartConfigs} />
 </div>
