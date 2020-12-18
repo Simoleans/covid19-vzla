@@ -40,7 +40,7 @@
 
 
 <main>
-	<div class="container-svelte overflow-y-auto">
+	<div class="container-svelte overflow-auto	">
 		
 		<Router url="{url}">
 			<!-- <nav>
