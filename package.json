@@ -2,7 +2,7 @@
   "name": "svelte-tailwind",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c && cross-env NODE_ENV=production tailwindcss build index.css -o public/build/bundle.css",
+    "build": "rollup -c && cross-env NODE_ENV=production tailwindcss build index.css -o public/build/bundle.css && npm start",
     "dev": "rollup -c -w",
     "start": "sirv public --single",
     "build-tailwind:dev": "npx tailwindcss build index.css -o public/build/bundle.css",
