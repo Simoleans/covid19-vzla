@@ -20,7 +20,7 @@
 
 	router.start();
 	
-	export let url = "";
+	// export let url = "";
 	let checkedDarkMode = false;
 	let error = false;
 	const API = 'https://covid19.patria.org.ve/api/v1/summary';
