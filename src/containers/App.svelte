@@ -6,7 +6,7 @@
 	import Menu from "../components/Menu.svelte";
 	import BackTop from '../components/BackTop.svelte';
 	import Charts from '../components/Charts.svelte';
-	import Historial from '../components/historial.svelte';
+	import Historial from '../components/Historial.svelte';
 
 	let page;
 	
