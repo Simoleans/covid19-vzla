@@ -3,7 +3,7 @@
     public = "public/"
 
 [[redirects]]
-  from = "/test"
-  to = "/holis"
+  from = "/*"
+  to = "/index.html"
   status = 200
   
