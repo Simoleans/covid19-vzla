@@ -1,4 +1,5 @@
 <script>
+	import router from 'page';
 	import { onMount } from 'svelte';
 	import { Router, Route } from "svelte-routing";
 	import Global from '../components/Global.svelte';
@@ -7,6 +8,17 @@
 	import Menu from "../components/Menu.svelte";
 	import BackTop from '../components/BackTop.svelte';
 	import Charts from '../components/Charts.svelte';
+	import Test from '../components/Test.svelte';
+
+	let page;
+	let params;
+	
+	router('/test',() => page = Test);
+	router('/', () => page = 'Home');
+
+	// router('/*', () => (page = NotFound));
+
+	router.start();
 	
 	export let url = "";
 	let checkedDarkMode = false;
@@ -38,7 +50,7 @@
 
 <main>
 	<div class="container-svelte">
-		<Router url="{url}">
+		<!-- <Router url="{url}">
 			 <Menu {checkedDarkMode}/>
 			 <div>
 			   <Route path="historial">
@@ -57,7 +69,22 @@
 					{/if}
 				</Route>
 			 </div>
-		   </Router>
+		   </Router> -->
+		   <Menu {checkedDarkMode}>
+				<a href="/" class="{page == 'Home' ? 'activeLinkMenu' : 'inactiveLinkMenu'}">Resumen</a>
+				<a href="/test"  class="{page == Test ? 'activeLinkMenu' : 'inactiveLinkMenu'}">Test</a>
+			</Menu>
+		   {#if page == 'Home'}
+				{#if data}
+					<Global {...data} />
+					<Charts {...data} />
+				{:else}
+					<p class="dark:text-white mt-3">{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
+				{/if}
+		   {/if}
+		   {#if page == Test}
+			   <Test />
+		   {/if}
 	  </div>
 	  <Footer />
 	  <BackTop />

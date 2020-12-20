@@ -1,18 +1,7 @@
 <script>
-    import { Link,link } from "svelte-routing";
 
     export let checkedDarkMode;
-
-    function getProps({ location, href, isPartiallyCurrent, isCurrent }) {
-      const isActive = href === "/" ? isCurrent : isPartiallyCurrent || isCurrent;
-      // The object returned here is spread on the anchor element's attributes
-      if (isActive) {
-        return { class: "activeLinkMenu" };
-      }else{
-        return { class: "inactiveLinkMenu" };
-      }
-      return {};
-    }
+   
 
     function darkMode()
     {
@@ -44,8 +33,9 @@
             <div class="flex ">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
              
-              <Link to="/" getProps="{getProps}">Resumen</Link>
-              <Link to="historial" getProps="{getProps}">Historial</Link>
+              <!-- <Link to="/" getProps="{getProps}">Resumen</Link>
+              <Link to="historial" getProps="{getProps}">Historial</Link> -->
+              <slot></slot>
             </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
