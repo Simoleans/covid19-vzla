@@ -3,6 +3,17 @@
 
     export let checkedDarkMode;
 
+    function getProps({ location, href, isPartiallyCurrent, isCurrent }) {
+      const isActive = href === "/" ? isCurrent : isPartiallyCurrent || isCurrent;
+      // The object returned here is spread on the anchor element's attributes
+      if (isActive) {
+        return { class: "activeLinkMenu" };
+      }else{
+        return { class: "inactiveLinkMenu" };
+      }
+      return {};
+    }
+
     function darkMode()
     {
         let htmlClasses = document.querySelector('html').classList;
@@ -33,8 +44,8 @@
             <div class="flex ">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
              
-              <a href="/" class="text-gray-300 hover:bg-gray-700 dark:text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium" use:link>Resumen</a>
-              <a href="estados" class="text-gray-300 dark:text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" use:link>Historial</a>
+              <Link to="/" getProps="{getProps}">Resumen</Link>
+              <Link to="historial" getProps="{getProps}">Historial</Link>
             </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

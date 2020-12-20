@@ -16,6 +16,14 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
+.activeLinkMenu{
+  @apply text-white dark:text-black bg-gray-700 dark:bg-white hover:text-white dark:hover:text-black px-3 py-2 rounded-md text-sm font-medium;
+}
+
+.inactiveLinkMenu{
+  @apply text-black dark:text-white hover:bg-gray-700 dark:hover:bg-white hover:text-white dark:hover:text-black px-3 py-2 rounded-md text-sm font-medium;
+}
+
 .toggle-checkbox:checked {
   @apply right-0 dark:border-yellow-400;
   right: 0;

@@ -4,8 +4,8 @@
   "scripts": {
     "build": "rollup -c && cross-env NODE_ENV=production tailwindcss build index.css -o public/build/bundle.css",
     "dev": "rollup -c -w",
-    "start": "sirv public",
-    "build-tailwind:dev": "npx tailwindcss build index.css -o public/css/main.css",
+    "start": "sirv public -s",
+    "build-tailwind:dev": "npx tailwindcss build index.css -o public/build/bundle.css",
     "build-css:production": "cross-env NODE_ENV=production tailwindcss build index.css -o public/css/bundle.css"
   },
   "devDependencies": {
