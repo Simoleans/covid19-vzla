@@ -27,7 +27,6 @@
     "postcss": "^8.2.1",
     "sirv-cli": "^1.0.0",
     "svelte-fusioncharts": "^1.0.0",
-    "svelte-routing": "^1.4.2",
     "tailwindcss": "^2.0.2"
   }
 }
