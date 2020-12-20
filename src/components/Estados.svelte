@@ -1,3 +1,3 @@
-<div class="Estados flex-1">
+<div class="flex-1">
     <slot></slot>
 </div>

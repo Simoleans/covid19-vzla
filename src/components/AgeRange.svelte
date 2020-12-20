@@ -1,3 +1,3 @@
-<div class="AgeRange flex-1 items-center" style="color : red !important">
+<div class="AgeRange flex-1">
       <slot></slot>
 </div>

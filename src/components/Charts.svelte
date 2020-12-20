@@ -96,9 +96,8 @@
     },
     chartConfigByRange = {
       type: 'column2d',
-       width: '100%',
+      width: '100%',
       height: '450',
-      renderAt: 'chart-container-range',
       dataSource : dataSourceByRange
     };
 
@@ -294,14 +293,13 @@ const dataSourceEstados = {
 </script>
 
 <div class="Charts">
-    <div class="flex flex-col md:flex-row gap-2">
+    <div class="flex flex-col md:flex-row gap-4">
       <Gender>
           <SvelteFC {...chartConfig} />
       </Gender>
       <AgeRange>
         <SvelteFC {...chartConfigByRange} />
       </AgeRange>
-      <!-- <AgeRange {...data}  /> -->
     </div>
     <div class="flex flex-row mt-3 md:w-full lg:w-full">
       <Estados>

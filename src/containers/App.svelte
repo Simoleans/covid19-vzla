@@ -37,7 +37,7 @@
 </script>
 
 <main>
-	<div class="container-svelte overflow-auto	">
+	<div class="container-svelte">
 		<Router url="{url}">
 			 <Menu {checkedDarkMode}/>
 			 <div>
