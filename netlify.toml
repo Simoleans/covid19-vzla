@@ -1,3 +1,9 @@
 [build]
     command = "npm run build"
     public = "public/"
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200
+  
