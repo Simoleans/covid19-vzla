@@ -1,16 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
-	import { Router, Route, Link } from "svelte-routing";
+	import { Router, Route } from "svelte-routing";
 	import Global from '../components/Global.svelte';
-	import Gender from '../components/Gender.svelte';
-	import Estados from "../components/Estados.svelte";
 	import Historial from "../components/Historial.svelte";
-	import AgeRange from "../components/AgeRange.svelte";
 	import Footer from "../components/Footer.svelte";
 	import Menu from "../components/Menu.svelte";
 	import BackTop from '../components/BackTop.svelte';
+	import Charts from '../components/Charts.svelte';
 	
-	export let url = ""; //This property is necessary declare to avoid ignore the Router
+	export let url = "";
 	let checkedDarkMode = false;
 	let error = false;
 	const API = 'https://covid19.patria.org.ve/api/v1/summary';
@@ -38,15 +36,9 @@
     });
 </script>
 
-
 <main>
 	<div class="container-svelte overflow-auto	">
-		
 		<Router url="{url}">
-			<!-- <nav>
-			   <Link to="/">Home</Link>
-			   <Link to="estados">Estados</Link>
-			 </nav> -->
 			 <Menu {checkedDarkMode}/>
 			 <div>
 			   <Route path="historial">
@@ -59,15 +51,9 @@
 			   <Route path="/">
 					{#if data}
 						<Global {...data} />
-						<div class="flex flex-col md:flex-row gap-2">
-							<Gender {...data}/>
-							<AgeRange {...data}  />
-						</div>
-						<div class="flex flex-row mt-3 md:w-full lg:w-full">
-							<Estados {...data}/>
-						</div>
+						<Charts {...data} />
 					{:else}
-						<p>{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
+						<p class="dark:text-white mt-3">{error ? 'Lo sentimos ha ocurrido un error, Actualiza la pagina.' : 'Cargando datos...'}</p>
 					{/if}
 				</Route>
 			 </div>
