@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to svelte-tailwind 👋</h1>
+<h1 align="center">COVID-19 EN VENEZUELA 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/futFran" target="_blank">
@@ -6,7 +6,6 @@
   </a>
 </p>
 
-> Template de Svelte + Tailwind 2.0
 > https://covid19-vzla.netlify.app/
 
 
