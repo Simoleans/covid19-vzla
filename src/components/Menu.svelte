@@ -19,8 +19,8 @@
     }
 </script>
 <div class="Menu">
-<nav class="bg-gray-200 dark:bg-gray-600 border-2 border-white mb-3">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+<nav class="bg-gray-400 dark:bg-gray-600 mb-3">
+    <div class="w-screen mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         </div>

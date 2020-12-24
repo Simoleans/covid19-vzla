@@ -45,11 +45,12 @@
 </script>
 
 <main>
+	<Menu {checkedDarkMode}>
+		<a href="/" class="{page == 'Home' ? 'activeLinkMenu' : 'inactiveLinkMenu'}">Resumen</a>
+		<a href="/historial"  class="{page == Historial ? 'activeLinkMenu' : 'inactiveLinkMenu'}">Historial</a>
+	</Menu>
 	<div class="container-svelte">
-		   <Menu {checkedDarkMode}>
-				<a href="/" class="{page == 'Home' ? 'activeLinkMenu' : 'inactiveLinkMenu'}">Resumen</a>
-				<a href="/historial"  class="{page == Historial ? 'activeLinkMenu' : 'inactiveLinkMenu'}">Historial</a>
-			</Menu>
+		   
 		   {#if page == 'Home'}
 				{#if data}
 					<Global {...data} />
