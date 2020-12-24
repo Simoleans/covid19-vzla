@@ -293,7 +293,7 @@ const dataSourceEstados = {
 </script>
 
 <div class="Charts">
-    <div class="flex flex-col md:flex-row gap-4">
+    <div class="flex flex-col md:flex-row md:gap-6 gap-20 mt-12 md:mt-5">
       <Gender>
           <SvelteFC {...chartConfig} />
       </Gender>
@@ -301,7 +301,7 @@ const dataSourceEstados = {
         <SvelteFC {...chartConfigByRange} />
       </AgeRange>
     </div>
-    <div class="flex flex-row mt-3 md:w-full lg:w-full">
+    <div class="flex flex-row md:mt-3 mt-12 md:w-full lg:w-full">
       <Estados>
         <SvelteFC {...chartConfigsEstados} />
       </Estados>
