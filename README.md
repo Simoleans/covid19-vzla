@@ -7,6 +7,8 @@
 </p>
 
 > Template de Svelte + Tailwind 2.0
+> https://covid19-vzla.netlify.app/
+
 
 ## Install
 
